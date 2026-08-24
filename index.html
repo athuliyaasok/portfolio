@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athuliya Asokakumar | Operations Executive & Process Specialist</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-beige: #F9F6F0;
+            --sage-green: #A3B19B;
+            --sage-dark: #4A5D4E;
+            --sage-light: #E8ECE6;
+            --text-main: #2C3531;
+            --text-muted: #5A6561;
+            --white: #FFFFFF;
+            --border-color: #E2DDD5;
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-beige);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-main);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Watercolor Accents */
+        .watercolor-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.45;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .blob-1 {
+            top: -50px;
+            right: -50px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, var(--sage-green) 0%, transparent 70%);
+        }
+
+        .blob-2 {
+            bottom: 100px;
+            left: -100px;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, var(--sage-green) 0%, transparent 70%);
+        }
+
+        /* Navigation */
+        nav {
+            padding: 24px 0;
+            background: rgba(249, 246, 240, 0.85);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(226, 221, 213, 0.5);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+            color: var(--sage-dark);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dark);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 48px auto;
+            font-size: 0.95rem;
+        }
+
+        /* 1. Hero Section */
+        #hero {
+            padding: 100px 0 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--sage-dark);
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .badge {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-main);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* 2. About & Core Competencies */
+        .about-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            margin-bottom: 40px;
+        }
+
+        .about-narrative {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            line-height: 1.8;
+            margin-bottom: 32px;
+            text-align: justify;
+        }
+
+        .competency-group {
+            margin-bottom: 24px;
+        }
+
+        .competency-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .competency-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--sage-dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pill {
+            background-color: var(--sage-light);
+            color: var(--sage-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* 3. Experience Section (Vintage Card Timeline) */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 100%;
+            width: 2px;
+            background-color: var(--sage-green);
+        }
+
+        @media (min-width: 768px) {
+            .timeline::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 24px;
+            left: 11px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--sage-dark);
+            border: 4px solid var(--bg-beige);
+            z-index: 2;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-dot {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .timeline-content {
+            margin-left: 50px;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-item:nth-child(odd) .timeline-content {
+                margin-left: 0;
+                width: 45%;
+            }
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 55%;
+                width: 45%;
+            }
+        }
+
+        .role-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .org-name {
+            font-size: 0.95rem;
+            color: var(--sage-dark);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .period {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            display: inline-block;
+            background: var(--bg-beige);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .contributions {
+            list-style-type: none;
+        }
+
+        .contributions li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .contributions li:last-child {
+            margin-bottom: 0;
+        }
+
+        .contributions li::before {
+            content: "•";
+            color: var(--sage-dark);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* 4. Academic Foundation & Credentials */
+        .academic-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .academic-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .academic-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .academic-degree {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .academic-institution {
+            font-size: 0.9rem;
+            color: var(--sage-dark);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .academic-focus {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .academic-highlight {
+            background-color: var(--sage-light);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--sage-dark);
+            border-left: 3px solid var(--sage-dark);
+        }
+
+        /* 5. Footer & Contact Section */
+        footer {
+            background-color: var(--sage-dark);
+            color: var(--white);
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .contact-link {
+            color: var(--sage-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--white);
+        }
+
+        .cta-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--white);
+            color: var(--sage-dark);
+            border: 1px solid var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--sage-light);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 1px solid var(--sage-light);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .hero-tagline { font-size: 1.05rem; }
+            .nav-links { display: none; }
+            .about-card, .timeline-content, .academic-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Accents -->
+    <div class="watercolor-blob blob-1"></div>
+    <div class="watercolor-blob blob-2"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">ATHULIYA A.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">Athuliya Asokakumar</h1>
+            <p class="hero-subtitle">Operations Executive & Process Specialist</p>
+            <p class="hero-tagline">"Connecting cross-functional teams, streamlining workflows, and turning unstructured processes into operational clarity."</p>
+            
+            <div class="badge-container">
+                <span class="badge"><i class="fa-solid fa-location-dot"></i> Rolla, Sharjah, UAE</span>
+                <span class="badge"><i class="fa-solid fa-briefcase"></i> 3+ Years Experience</span>
+                <span class="badge"><i class="fa-solid fa-graduation-cap"></i> B.E. Aeronautical Engineering</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About & Core Competencies -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About & Core Competencies</h2>
+            <p class="section-subtitle">Bridging analytical engineering principles with dynamic operational strategy.</p>
+            
+            <div class="about-card">
+                <p class="about-narrative">
+                    Leveraging a strong foundation in Aeronautical Engineering, I apply rigorous analytical logic and structured problem-solving to high-impact operational management. My expertise lies in standardizing unstructured processes, developing intuitive dashboard reporting systems, and aligning cross-departmental teams to maximize efficiency. Whether managing vendor relationships, coordinating large-scale programs, or maintaining operational compliance, I bring structure, clarity, and continuous improvement to every workflow.
+                </p>
+                
+                <div class="competencies">
+                    <div class="competency-group">
+                        <div class="competency-title"><i class="fa-solid fa-diagram-project"></i> Operations & Workflow</div>
+                        <div class="pills-container">
+                            <span class="pill">Process Management</span>
+                            <span class="pill">Resource Tracking</span>
+                            <span class="pill">Timeline Management</span>
+                        </div>
+                    </div>
+                    
+                    <div class="competency-group">
+                        <div class="competency-title"><i class="fa-solid fa-handshake"></i> Vendor & Stakeholder</div>
+                        <div class="pills-container">
+                            <span class="pill">External Vendor Alignment</span>
+                            <span class="pill">Event Coordination</span>
+                            <span class="pill">Stakeholder Communication</span>
+                        </div>
+                    </div>
+                    
+                    <div class="competency-group">
+                        <div class="competency-title"><i class="fa-solid fa-chart-column"></i> Systems & Tools</div>
+                        <div class="pills-container">
+                            <span class="pill">Excel Dashboards</span>
+                            <span class="pill">CRM Management</span>
+                            <span class="pill">Operational Records & Audits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Experience Section (Vintage Card Timeline) -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">A timeline of operational contributions and organizational impact.</p>
+            
+            <div class="timeline">
+                <!-- Role 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="role-title">Operations Executive & Content Writer</h3>
+                        <p class="org-name">ATMS Education Group, Sharjah</p>
+                        <span class="period">Nov 2024 – Present</span>
+                        <ul class="contributions">
+                            <li>Coordinated daily cross-departmental operations and vendor relationships.</li>
+                            <li>Built Excel reporting dashboards and tracked resource requests end-to-end.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="role-title">Admission Officer</h3>
+                        <p class="org-name">ATMS Education Group, Sharjah</p>
+                        <span class="period">Jul 2024 – Nov 2024</span>
+                        <ul class="contributions">
+                            <li>Managed inquiry handling, applicant documentation verification, and CRM records.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="role-title">Counselor / Trainer</h3>
+                        <p class="org-name">RVS College of Arts and Science, India</p>
+                        <span class="period">Jul 2022 – Apr 2024</span>
+                        <ul class="contributions">
+                            <li>Coordinated training for 250–300+ students per term across 9–10 sections.</li>
+                            <li>Awarded "Best Trainer – Soft Skills".</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="role-title">Student Success Specialist</h3>
+                        <p class="org-name">Byju's, India</p>
+                        <span class="period">Jan 2022 – May 2022</span>
+                        <ul class="contributions">
+                            <li>Managed retention and issue resolution for 300 enrolled learners.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="role-title">Customer Associate</h3>
+                        <p class="org-name">Amazon, India</p>
+                        <span class="period">Aug 2021 – Nov 2021</span>
+                        <ul class="contributions">
+                            <li>Adhered to SLAs across phone, email, and chat interactions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Academic Foundation & Credentials -->
+    <section id="academics">
+        <div class="container">
+            <h2 class="section-title">Academic Foundation</h2>
+            <p class="section-subtitle">Engineering logic combined with behavioral psychology insights.</p>
+            
+            <div class="academic-grid">
+                <div class="academic-card">
+                    <div>
+                        <h3 class="academic-degree">B.E. Aeronautical Engineering</h3>
+                        <p class="academic-institution">Nehru Institute of Technology (2017–2021)</p>
+                        <p class="academic-focus"><strong>Core focus:</strong> Aerodynamics, propulsion, and aircraft structures.</p>
+                    </div>
+                    <div class="academic-highlight">
+                        <i class="fa-solid fa-scroll"></i> <strong>Published Paper:</strong> "Study on Aviation Carbon Emission Reduction by Artificial Photosynthesis"
+                    </div>
+                </div>
+
+                <div class="academic-card">
+                    <div>
+                        <h3 class="academic-degree">PG Diploma in Psychology</h3>
+                        <p class="academic-institution">Acharya Nagarjuna University (2023–2024)</p>
+                        <p class="academic-focus"><strong>Core focus:</strong> Psychological assessment, counseling, and behavior analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer & Contact Section -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-links">
+                <a href="mailto:athuliyasaradha@gmail.com" class="contact-link">
+                    <i class="fa-solid fa-envelope"></i> athuliyasaradha@gmail.com
+                </a>
+                <a href="tel:+971559050760" class="contact-link">
+                    <i class="fa-solid fa-phone"></i> +971-559050760
+                </a>
+                <a href="https://linkedin.com/in/athuliya-asokakumar-8ab30b1b4" target="_blank" rel="noopener" class="contact-link">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+                </a>
+            </div>
+
+            <div class="cta-container">
+                <a href="resume.pdf" class="btn btn-primary" download><i class="fa-solid fa-download"></i> Download Resume (PDF)</a>
+                <a href="mailto:athuliyasaradha@gmail.com" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Send Message</a>
+            </div>
+
+            <p class="copyright">&copy; Athuliya Asokakumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
